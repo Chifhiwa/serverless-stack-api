@@ -43,4 +43,12 @@
 8. Webpack allows us to generate optimised packages for our Lambda Functions by only including the code that is used in out functions.
 9. Customise serverless.yml file
 10. Create a githum repository: https://github.com/Chifhiwa/serverless-stack-api.git
-11. 
+11. Add code to githum:
+    1.  git init
+    2.  git add .
+    3.  git commint -m "First Commit"
+    4.  git remote add https://github.com/Chifhiwa/serverless-stack-api.git
+    5.  git remote -v
+    6.  git push -u origin master
+
+12. 
