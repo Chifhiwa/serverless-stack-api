@@ -41,14 +41,23 @@
    2. npm install aws-sdk --save-dev
    3. npm install uuid --save
 8. Webpack allows us to generate optimised packages for our Lambda Functions by only including the code that is used in out functions.
-9. Customise serverless.yml file
-10. Create a githum repository: https://github.com/Chifhiwa/serverless-stack-api.git
-11. Add code to githum:
-    1.  git init
-    2.  git add .
-    3.  git commint -m "First Commit"
-    4.  git remote add https://github.com/Chifhiwa/serverless-stack-api.git
-    5.  git remote -v
-    6.  git push -u origin master
+9. Confgure the backend create function
+   1.  Lamnbda Function: Create a create.js function
+   2.  Configure Endpoint:
+       1.  Create environment variable for DynamoDB table
+       2.  Create IAM roles for Lambda Function
+       3.  Create a function
+           1.  name of the function
+           2.  the configuration of the event to trigget the function (http for API gateway - post, path, etc. )
 
-12. 
+      4. Test the Function:
+         1. create folder called mocks
+         2. create a json document with the expected input for the API
+         3. execute serverless invoke local --function create --path mocks/create-event.json
+
+10. Create a Stripe Account:
+    1.  Stripe details:
+        1.  Publishable Key: **pk_test_xtxVANpylkOsDOzH7xFVoiJO00P9l6JEQG**
+        2.  Secret key: **sk_test_Lxk6kqZjwYHwqngWFlZKelD900KyCEkPaY**
+
+11. Billing API is created and added. Business Logic code is contained in a library file, and is not necesarily embaded into the code and is not a seperate lambda function. It is a library

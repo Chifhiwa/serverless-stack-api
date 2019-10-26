@@ -1,0 +1,27 @@
+noteId : dd949260-f2fd-11e9-9bba-c1419c9db639
+
+
+Username: tshifhiwa47@gmail.com
+passweord: Test@1234
+
+User Pool Id: us-east-1_BNnJkY7h3
+User Pool ARN: arn:aws:cognito-idp:us-east-1:770328975346:userpool/us-east-1_BNnJkY7h3
+appl client id: 7ctfk7dqhpu0rm6lm95he6854e
+
+Cognito-identity-pool: us-east-1:27f2d4cc-5fa5-426c-b532-f5dc9030d22e
+
+API Gateway URL: https://dktnqnusrj.execute-api.us-east-1.amazonaws.com/prod
+
+
+npx aws-api-gateway-cli-test \
+--username='tshifhiwa47@gmail.com' \
+--password='Test@1234' \
+--user-pool-id='us-east-1_BNnJkY7h3' \
+--app-client-id='7ctfk7dqhpu0rm6lm95he6854e' \
+--cognito-region='us-east-1' \
+--identity-pool-id='us-east-1:27f2d4cc-5fa5-426c-b532-f5dc9030d22e' \
+--invoke-url='https://dktnqnusrj.execute-api.us-east-1.amazonaws.com/prod' \
+--api-gateway-region='us-east-1' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'
