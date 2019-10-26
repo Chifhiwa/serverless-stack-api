@@ -1,0 +1,17 @@
+service: notes-app-api
+
+# Create an optimized package for our functions
+package:
+  individually: true # we are telling Serverless Framework to create a single package per Lambda function.
+
+plugins:
+  - serverless-bundle # Package our functions with Webpack
+  - serverless-offline # local development
+  - serverless-dotenv-plugin # Load .env as environment variables
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: prod
+  region: us-east-1
+
